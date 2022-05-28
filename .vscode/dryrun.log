@@ -1,0 +1,6 @@
+make --dry-run --keep-going --print-directory
+make: Entering directory '/home/matanel/Desktop/Operating Systems/Sync_Procces'
+clang++-9 -pthread server.cpp -o th_server
+clang++-9 -pthread client.cpp -o th_client
+make: Leaving directory '/home/matanel/Desktop/Operating Systems/Sync_Procces'
+ 

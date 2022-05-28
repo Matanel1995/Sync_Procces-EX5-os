@@ -1,0 +1,1 @@
+HELLO THIS OS TIRGUL and we are reading from a file :)
