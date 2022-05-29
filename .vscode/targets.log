@@ -1,6 +1,4 @@
 make all --print-data-base --no-builtin-variables --no-builtin-rules --question
-make: *** No rule to make target 'all'.  Stop.
-
 # GNU Make 4.2.1
 # Built for x86_64-pc-linux-gnu
 # Copyright (C) 1988-2016 Free Software Foundation, Inc.
@@ -8,7 +6,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Mon May 16 11:56:19 2022
+# Make data base, printed on Sun May 29 14:28:13 2022
 
 # Variables
 
@@ -43,15 +41,15 @@ GDMSESSION = ubuntu
 # environment
 XMODIFIERS = @im=ibus
 # makefile
-CURDIR := /home/matanel/Desktop/Operating Systems/Sync_Procces
+CURDIR := /home/matanel/Documents/GitHub/Sync_Procces-EX5-os
 # makefile
 SHELL = /bin/sh
 # environment
-SNAP_DATA = /var/snap/code/96
+SNAP_DATA = /var/snap/code/97
 # environment
 VSCODE_NLS_CONFIG = {"locale":"en-gb","availableLanguages":{},"_languagePackSupport":true}
 # environment
-JOURNAL_STREAM = 8:32084
+JOURNAL_STREAM = 8:30560
 # environment
 XDG_CONFIG_DIRS = /etc/xdg/xdg-ubuntu:/etc/xdg
 # environment
@@ -69,13 +67,13 @@ USERNAME = matanel
 # environment
 XDG_DATA_DIRS = /usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop
 # environment
-DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/1000/bus,guid=3f8e7278c74d68f30a7b2f116282031b
+DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/1000/bus
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-_ = /snap/code/96/usr/share/code/code
+_ = /snap/code/97/usr/share/code/code
 # environment
-MANAGERPID = 1060
+MANAGERPID = 1182
 # environment
 LESSOPEN = | /usr/bin/lesspipe %s
 # makefile (from 'makefile', line 2)
@@ -83,7 +81,7 @@ o = -o
 # environment
 VSCODE_CWD = /home/matanel
 # environment
-GSETTINGS_SCHEMA_DIR = /snap/code/96/usr/share/glib-2.0/schemas
+GSETTINGS_SCHEMA_DIR = /snap/code/97/usr/share/glib-2.0/schemas
 # default
 MAKE_HOST := x86_64-pc-linux-gnu
 # environment
@@ -91,15 +89,15 @@ PATH = /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/
 # environment
 GPG_AGENT_INFO = /run/user/1000/gnupg/S.gpg-agent:0:1
 # environment
-SESSION_MANAGER = local/matanel-VirtualBox:@/tmp/.ICE-unix/1353,unix/matanel-VirtualBox:/tmp/.ICE-unix/1353
+SESSION_MANAGER = local/Matanel:@/tmp/.ICE-unix/1463,unix/Matanel:/tmp/.ICE-unix/1463
 # environment
 XDG_RUNTIME_DIR = /run/user/1000
 # environment
 GDK_PIXBUF_MODULE_FILE = /home/matanel/snap/code/common/.cache/gdk-pixbuf-loaders.cache
 # environment
-SNAP = /snap/code/96
+SNAP = /snap/code/97
 # environment
-SNAP_VERSION = da15b6fd
+SNAP_VERSION = c3511e6c
 # environment
 XDG_MENU_PREFIX = gnome-
 # environment
@@ -109,9 +107,9 @@ DISABLE_WAYLAND = 1
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # environment
-INVOCATION_ID = 6e7ad2b7845b4a868cdb9ab3a5800a36
+INVOCATION_ID = 881971a547504c94a6b99f0fd659f40b
 # environment
-GDK_PIXBUF_MODULEDIR = /snap/code/96/usr/lib/x86_64-linux-gnu/gdk-pixbuf-2.0/2.10.0/loaders
+GDK_PIXBUF_MODULEDIR = /snap/code/97/usr/lib/x86_64-linux-gnu/gdk-pixbuf-2.0/2.10.0/loaders
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # environment
@@ -121,7 +119,7 @@ XDG_SESSION_DESKTOP = ubuntu
 # environment
 SSH_AUTH_SOCK = /run/user/1000/keyring/ssh
 # environment
-GIO_LAUNCHED_DESKTOP_FILE_PID = 3050
+GIO_LAUNCHED_DESKTOP_FILE_PID = 2899
 # automatic
 %F = $(notdir $%)
 # environment
@@ -131,11 +129,11 @@ VSCODE_PIPE_LOGGING = true
 # environment
 SNAP_INSTANCE_KEY = 
 # environment
-PWD = /home/matanel/Desktop/Operating Systems/Sync_Procces
+PWD = /home/matanel/Documents/GitHub/Sync_Procces-EX5-os
 # default
 .LOADED := 
 # environment
-SSH_AGENT_PID = 1281
+SSH_AGENT_PID = 1401
 # environment
 ORIGINAL_XDG_CURRENT_DESKTOP = ubuntu:GNOME
 # environment
@@ -149,7 +147,7 @@ LESSCLOSE = /usr/bin/lesspipe %s %s
 # environment
 VSCODE_CLI = 1
 # environment
-VSCODE_CODE_CACHE_PATH = /home/matanel/.config/Code/CachedData/da15b6fd3ef856477bf6f4fb29ba1b7af717770d
+VSCODE_CODE_CACHE_PATH = /home/matanel/.config/Code/CachedData/c3511e6c69bb39013c4a4b7b9566ec1ca73fc4d5
 # environment
 LOGNAME = matanel
 # environment
@@ -157,7 +155,7 @@ APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
 # environment
 SNAP_LIBRARY_PATH = /var/lib/snapd/lib/gl:/var/lib/snapd/lib/gl32:/var/lib/snapd/void
 # environment
-SNAP_CONTEXT = sLVyp4uczQcQ05ArrjL4G7wUQlxevN80hdux_TrDbeSZEAwt7_My
+SNAP_CONTEXT = TF9zqRjTMfN_TKLLey2KOFBciMG7tf_OEbbL12--F_5_WrXNdI20
 # environment
 ELECTRON_NO_ATTACH_CONSOLE = 1
 # environment
@@ -179,7 +177,7 @@ MAKECMDGOALS := all
 # environment
 QT_IM_MODULE = ibus
 # environment
-SNAP_USER_DATA = /home/matanel/snap/code/96
+SNAP_USER_DATA = /home/matanel/snap/code/97
 # environment
 SHLVL = 0
 # makefile (from 'makefile', line 1)
@@ -187,13 +185,13 @@ CC = clang++-9
 # environment
 GNOME_SHELL_SESSION_MODE = ubuntu
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-ca1e7388-c976-4f56-85a1-633415039fae.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-6901168d-e95f-45ed-9b47-bf390e07d263.sock
 # default
 MAKE_VERSION := 4.2.1
 # environment
 USER = matanel
 # environment
-SNAP_REVISION = 96
+SNAP_REVISION = 97
 # makefile
 .DEFAULT_GOAL := thread
 # environment
@@ -209,7 +207,7 @@ MAKE_COMMAND := make
 # environment
 LANGUAGE = en_IL:en
 # environment
-VSCODE_IPC_HOOK = /run/user/1000/vscode-239e23a1-1.67.1-main.sock
+VSCODE_IPC_HOOK = /run/user/1000/vscode-239e23a1-1.67.2-main.sock
 # environment
 BAMF_DESKTOP_FILE_HINT = /var/lib/snapd/desktop/applications/code_code.desktop
 # makefile
@@ -225,22 +223,21 @@ GDK_BACKEND = x11
 # automatic
 +F = $(notdir $+)
 # environment
- 
 QT_ACCESSIBILITY = 1
 # default
 MAKEFILES := 
 # environment
-SNAP_COOKIE = sLVyp4uczQcQ05ArrjL4G7wUQlxevN80hdux_TrDbeSZEAwt7_My
+SNAP_COOKIE = TF9zqRjTMfN_TKLLey2KOFBciMG7tf_OEbbL12--F_5_WrXNdI20
 # automatic
 <F = $(notdir $<)
 # environment
 SNAP_NAME = code
 # environment
 LC_ALL = C
-# environment
-DBUS_STARTER_BUS_TYPE = session
 # makefile (from 'makefile', line 3)
 pt = -pthread
+# environment
+GJS_DEBUG_TOPICS = JS ERROR;JS LOG
 # automatic
 ^F = $(notdir $^)
 # default
@@ -253,14 +250,14 @@ CHROME_DESKTOP = code-url-handler.desktop
 WINDOWPATH = 2
 # default
 .INCLUDE_DIRS = /usr/include /usr/local/include /usr/include
+# environment
+GJS_DEBUG_OUTPUT = stderr
 # default
 .RECIPEPREFIX := 
 # environment
 LANG = C
 # environment
-VSCODE_PID = 3093
-# environment
-DBUS_STARTER_ADDRESS = unix:path=/run/user/1000/bus,guid=3f8e7278c74d68f30a7b2f116282031b
+VSCODE_PID = 3039
 # variable set hash-table stats:
 # Load=124/1024=12%, Rehash=0, Collisions=19/149=13%
 
@@ -270,9 +267,9 @@ DBUS_STARTER_ADDRESS = unix:path=/run/user/1000/bus,guid=3f8e7278c74d68f30a7b2f1
 
 # Directories
 
-# . (device 2053, inode 1181747): 15 files, no impossibilities.
+# . (device 2053, inode 1313745): 17 files, no impossibilities.
 
-# 15 files, no impossibilities in 1 directories.
+# 17 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -286,6 +283,9 @@ t_server: server.cpp Stack.cpp Node.hpp
 #  File has not been updated.
 #  recipe to execute (from 'makefile', line 9):
 	$(CC) $(pt) server.cpp $(o) th_server
+ 
+make: *** No rule to make target 'all'.  Stop.
+
 
 # Not a target:
 all:
@@ -297,7 +297,7 @@ all:
 # Not a target:
 makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-04-24 19:49:24.224939
+#  Last modified 2022-05-28 17:41:34.731327039
 #  File has been updated.
 #  Successfully updated.
 
@@ -358,12 +358,12 @@ clean:
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 24 / storage = 212 B / avg = 8 B
-# current buf: size = 8162 B / used = 212 B / count = 24 / avg = 8 B
+# strcache buffers: 1 (0) / strings = 26 / storage = 232 B / avg = 8 B
+# current buf: size = 8162 B / used = 232 B / count = 26 / avg = 8 B
 
-# strcache performance: lookups = 40 / hit rate = 40%
+# strcache performance: lookups = 42 / hit rate = 38%
 # hash-table stats:
-# Load=24/8192=0%, Rehash=0, Collisions=1/40=2%
-# Finished Make data base on Mon May 16 11:56:19 2022
+# Load=26/8192=0%, Rehash=0, Collisions=1/42=2%
+# Finished Make data base on Sun May 29 14:28:13 2022
 
  

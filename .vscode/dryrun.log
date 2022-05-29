@@ -1,6 +1,7 @@
-make --dry-run --keep-going --print-directory
-make: Entering directory '/home/matanel/Desktop/Operating Systems/Sync_Procces'
-clang++-9 -pthread server.cpp -o th_server
-clang++-9 -pthread client.cpp -o th_client
-make: Leaving directory '/home/matanel/Desktop/Operating Systems/Sync_Procces'
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/home/matanel/Documents/GitHub/Sync_Procces-EX5-os'
+gcc -Wall -g -c  Stack.c
+gcc server.cpp -o server
+gcc client.cpp -lpthread -o client
+make: Leaving directory '/home/matanel/Documents/GitHub/Sync_Procces-EX5-os'
  

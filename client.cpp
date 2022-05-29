@@ -1,7 +1,3 @@
-/*
-** client.c -- a stream socket client demo
-*/
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
@@ -13,16 +9,35 @@
 #include <sys/socket.h>
 #include <pthread.h>
 #include <arpa/inet.h>
-#include <iostream>
-
-#define PORT "3490" // the port client will be connecting to
-
-#define MAX_LEN 1024
-
+#define MAX_LENGTH 1024
+#define PORT "3491" // the port client will be connecting to
+int finish =0;
 #define MAXDATASIZE 100 // max number of bytes we can get at once
 
-using namespace std;
+
 // get sockaddr, IPv4 or IPv6:
+void* cliendSend(void* sock){
+    char toSend[MAX_LENGTH];
+    while(!finish) {
+        unsigned long int Rsock = (unsigned long int)sock;
+        memset(toSend,0,MAX_LENGTH);
+        fgets(toSend , sizeof(toSend) , stdin);
+        send(Rsock, toSend,MAX_LENGTH,0);
+    }
+}
+void* clientRcv(void* sock){
+    while (!finish){
+        unsigned long int Rsock = (unsigned long int)sock;
+        char rest[MAX_LENGTH];
+        memset(rest,0,MAX_LENGTH);
+        recv(Rsock , rest ,MAX_LENGTH,0);
+        printf("OUTPUT : ");
+        printf("%s",rest);
+        if(strcmp(rest,"Goodbye")==0){
+            finish=1;
+        }
+    }
+}
 void *get_in_addr(struct sockaddr *sa)
 {
     if (sa->sa_family == AF_INET) {
@@ -32,30 +47,9 @@ void *get_in_addr(struct sockaddr *sa)
     return &(((struct sockaddr_in6*)sa)->sin6_addr);
 }
 
-void* sendFunc(void* mySock){
-    unsigned long int sock = (unsigned long int)mySock;
-    char serverAns[MAX_LEN];
-    while(1){
-        char userData[MAX_LEN];
-        //get data from user
-        memset(userData,0,MAX_LEN);
-        fgets(userData,MAX_LEN,stdin);
-        //send to the server the data recived from user
-        send(sock,userData,MAX_LEN,0);
-        //recive feedback from server
-        recv(sock,serverAns,MAX_LEN,0);
-        if(strcmp(serverAns, " ") == 0){
-            continue;
-        }
-        else{
-            cout <<"OUTPUT: " <<serverAns << endl;
-        }
-    }
-}
-
 int main(int argc, char *argv[])
 {
-    int sockfd, numbytes;  
+    int sockfd, numbytes;
     char buf[MAXDATASIZE];
     struct addrinfo hints, *servinfo, *p;
     int rv;
@@ -78,7 +72,7 @@ int main(int argc, char *argv[])
     // loop through all the results and connect to the first we can
     for(p = servinfo; p != NULL; p = p->ai_next) {
         if ((sockfd = socket(p->ai_family, p->ai_socktype,
-                p->ai_protocol)) == -1) {
+                             p->ai_protocol)) == -1) {
             perror("client: socket");
             continue;
         }
@@ -98,25 +92,17 @@ int main(int argc, char *argv[])
     }
 
     inet_ntop(p->ai_family, get_in_addr((struct sockaddr *)p->ai_addr),
-            s, sizeof s);
+              s, sizeof s);
     printf("client: connecting to %s\n", s);
-
     freeaddrinfo(servinfo); // all done with this structure
+//    send(sockfd,"PUSH A",6,0);
+    pthread_t send;
+    pthread_create(&send, NULL, clientRcv, (void*)sockfd);
+    pthread_t rcv;
+    pthread_create(&rcv, NULL, cliendSend, (void*)sockfd);
+    pthread_join(send, NULL);
+    pthread_join(rcv, NULL);
 
-    // if ((numbytes = recv(sockfd, buf, MAXDATASIZE-1, 0)) == -1) {
-    //     perror("recv");
-    //     exit(1);
-    // }
-
-    //buf[numbytes] = '\0';
-
-    //creating new thread to recive messages
-    pthread_t sendThread;
-    pthread_create(&sendThread,NULL, sendFunc,(void *)sockfd);
-    pthread_join(sendThread,NULL);
-    printf("client: received '%s'\n",buf);
-
-    // close(sockfd);
 
     return 0;
 }

@@ -1,15 +1,24 @@
-CC = clang++-9
-o = -o
-pt = -pthread
+CC = gcc
+C = -c
+O = -o
+Flag = -Wall -g -c
 
-#Make function for threads code
-thread: t_server t_client
+all: server client
 
-t_server: server.cpp Stack.cpp Node.hpp
-	$(CC) $(pt) server.cpp $(o) th_server
+server: Stack.o server.cpp
+	$(CC) server.cpp $(O) server
 
-t_client: client.cpp Stack.cpp Node.hpp
-	$(CC) $(pt) client.cpp $(o) th_client
+client: client.cpp
+	$(CC) client.cpp -lpthread $(O) client
+
+Stack.o:  Stack.c
+	$(CC) $(Flag)  Stack.c
+
+
+Node.o:	Node.c
+	$(CC) $(Flag)  Node.c
+
+.PHONY: clean all
 
 clean:
-	rm -f *.o th_server th_client
+	rm -f *.o server client
